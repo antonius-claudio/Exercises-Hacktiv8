@@ -32,7 +32,7 @@
     SET Count to 0;
     WHILE Count < total
         DISPLAY Count + 1
-        ADD COUNT by 1
+        INCREMENT COUNT
     END WHILE
 
 ------------------------------------------------------------------------------
@@ -47,5 +47,5 @@
         ELSE 
             DISPLAY "Memuji siswa"
         END IF
-    ADD i by 1
+    INCREMENT i
     END WHILE
