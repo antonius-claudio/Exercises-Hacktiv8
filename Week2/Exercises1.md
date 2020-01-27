@@ -40,12 +40,12 @@
 ## 4. Periksa Kuku
 
     READ and SET total to 40
-    SET i to 0
-    WHILE i < total
+    SET i to 1
+    WHILE i <= total
         IF kuku siswa ke i == kuku panjang
-            DO  DISPLAY "Menghukum siswa"
+            DO  DISPLAY Menghukum siswa ke i
         ELSE 
-            DISPLAY "Memuji siswa"
+            DISPLAY Memuji siswa ke i
         END IF
     INCREMENT i
     END WHILE
