@@ -1,4 +1,4 @@
-1.  Newton Second Law
+## 1. Newton Second Law
 
     READ and SET m to 600;
     READ and SET a to 2;
@@ -7,7 +7,7 @@
 
 ------------------------------------------------------------------------------
 
-2.  Tahun Kabisat
+## 2. Tahun Kabisat
 
     READ and SET tahun;
     IF tahun modulo 4 is 0;
@@ -26,7 +26,7 @@
 
 ------------------------------------------------------------------------------
 
-3.  Laundry Day
+## 3. Laundry Day
 
     READ and SET total to 20;
     SET Count to 0;
@@ -37,7 +37,7 @@
 
 ------------------------------------------------------------------------------
 
-4.  Periksa Kuku
+## 4. Periksa Kuku
 
     READ and SET total to 40
     SET i to 0
