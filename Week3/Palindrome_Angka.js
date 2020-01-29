@@ -26,9 +26,32 @@ function angkaPalindrome(angka){
             condition = true;
             return stringAngkaNext_i
         }
-        
     }
 }
+
+// // inbuilt function
+// function angkaPalindrome(angka){
+//     // variable untuk check sudah palindrome atau belum
+//     let condition = false;
+    
+//     // looping mulai dari angka 1 berikutnya bertambah 1 sampai kondisi true atau polindrome
+//     for (let i = (angka+1); condition==false ; i++) {
+//         // mengubah angkaNext menjadi string agar bisa dibalik
+//         let stringAngkaNext_i = i.toString();
+//         // variable untuk reverse
+//         let reverseNext_i = stringAngkaNext_i;
+
+//         reverseNext_i = reverseNext_i.split('');
+//         reverseNext_i = reverseNext_i.reverse();
+//         reverseNext_i = reverseNext_i.join('');
+
+//         // untuk cek palindrome atau belum
+//         if (stringAngkaNext_i === reverseNext_i) {
+//             condition = true;
+//             return stringAngkaNext_i
+//         }
+//     }
+// }
 
 console.log(angkaPalindrome(8)); // 9
 console.log(angkaPalindrome(10)); // 11
