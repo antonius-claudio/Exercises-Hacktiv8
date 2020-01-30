@@ -10,11 +10,21 @@ function hitungJumlahKata(kalimat) {
         if (kalimat[i] !== ' ') {
             kata_ke[count] += kalimat[i];
         } else {
+            // membuat index pada array
             count += 1;
+            // bila array spasi, maka di isi '' bukan kosong (undefined)
+            kata_ke[count] = '';
         }
     }
     return count+1;
+    // return kata_ke;
 }
+
+// // inbuilt function
+// function hitungJumlahKata(kalimat) {
+//     kalimat.split(' ');
+//     return kalimat.split(' ').length;
+// }
 
 // TEST CASES
 console.log(hitungJumlahKata('I have a dream')); // 4
