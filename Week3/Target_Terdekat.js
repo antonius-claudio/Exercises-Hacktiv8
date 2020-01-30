@@ -1,17 +1,27 @@
 // Claudio Antonius
 
 function targetTerdekat(arr) {
-    let test = [];
-    let var1;
-    let indexVar1;
-    let count = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] !== ' ') {
-            var1 = arr[i];
-            indexVar1 = i;
+    let count = 999;
+    // let balik = []
+    for (let i = 0; i < arr.length-1; i++) {
+        if (arr[i] !== ' '){
+            for (let j = i+1; j < arr.length; j++) {
+                if (arr[j] !== ' '){
+                    if ((arr[i] === 'x' && arr[j] === 'o') || (arr[i] === 'o' && arr[j] === 'x')){
+                        // balik.push(`${arr[i]} -> ${arr[j]}`)
+
+                        let temp = j-i;
+                        if (temp < count){
+                            count = temp;
+                        }
+                    }
+                }
+            }
         }
     }
-    return test
+    if (count === 999)
+        count = 0;
+    return count
 }
 
 // TEST CASES
