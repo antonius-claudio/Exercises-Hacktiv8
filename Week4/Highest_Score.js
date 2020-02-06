@@ -1,9 +1,8 @@
 // Claudio Antonius
 
 function highestScore (students) {
-    if (students.length === 0) {
-        return students;
-    } else {
+    let objResult = {};
+    if (students.length !== 0) {
         // cari nama class tanpa double
         let arrClass = [];
         arrClass.push(students[0].class);
@@ -17,29 +16,27 @@ function highestScore (students) {
                 arrClass.push(students[i].class);             
             }
         }
-        let objResult = {};
         //mencari nilai tertinggi
         for (let k = 0; k < arrClass.length; k++) {
             let objClassResult = {};
             let tempScore = 0;
             let tempName;
+            let tempClass;
             for (let l = 0; l < students.length; l++) {
                 if (arrClass[k] === students[l].class){
                     if (students[l].score > tempScore){
                         tempScore = students[l].score;
                         tempName = students[l].name;
+                        tempClass = students[l].class;
                     }
                 }
             }
             objClassResult.name = tempName;
             objClassResult.score = tempScore;
-            console.log(arrClass[k])
-            objResult.test = objClassResult; // gak bisa simpen obj dalam obj
-            console.log(objResult);
+            objResult[tempClass] = objClassResult;
         }
-        return "";
-        // return objResult;
     }
+    return objResult;
 }
 
 // TEST CASE

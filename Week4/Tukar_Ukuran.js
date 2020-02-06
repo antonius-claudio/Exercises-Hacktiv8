@@ -1,8 +1,8 @@
 // Claudio Antonius
 
 function tukarBesarKecil(kalimat) {
-    let abjadKecil = 'abcdefghijklmnopqrstuvwxyz';
-    let abjadBesar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // let abjadKecil = 'abcdefghijklmnopqrstuvwxyz';
+    // let abjadBesar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let newKalimat = '';
     for (let i = 0; i < kalimat.length; i++) {
         // for (let j = 0; j < abjadKecil.length; j++) {
