@@ -6,7 +6,7 @@ function totalDigitRekursif(angka) {
     if (strAngka.length === 1)
         return Number(strAngka[0]);
     else
-        return Number(strAngka[0]) + totalDigitRekursif(strAngka.slice(1, strAngka.length));
+        return Number(strAngka[0]) + totalDigitRekursif(strAngka.substr(1, strAngka.length));
 }
 
 // TEST CASES

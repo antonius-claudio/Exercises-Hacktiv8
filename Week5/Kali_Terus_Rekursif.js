@@ -15,7 +15,7 @@ function cekHasil(angka) {
         // return Number(strAngka[0]);
         return angka;
     else {
-        return Number(strAngka[0]) * cekHasil(Number(strAngka.slice(1)));
+        return Number(strAngka[0]) * cekHasil(Number(strAngka.substr(1)));
     }
 }
 
