@@ -27,11 +27,34 @@ function getTotal(arrNumber) {
         return '';
 }
 
+// Latihan OBJECT
+// function getHigh(arrNumber) {
+//     let result = {};
+//     for (let i = 0; i < arrNumber.length; i++) {
+//         let stringArr = String(arrNumber[i]);
+//         if (result[stringArr] == null)
+//             result[stringArr] = 1;
+//         else result[stringArr]++;
+//     }
+//     let temp = 0;
+//     let highest = '';
+//     for (var key in result) {
+//         if (key > highest) {
+//             temp = result[key];
+//             highest = key;
+//         }
+//     }
+//     if (arrNumber.length != 0)
+//         return `angka paling besar adalah ${highest} dan jumlah kemunculan sebanyak ${temp} kali`;
+//     else
+//         return '';
+// }
+
 function mostFrequentLargestNumbers(arrNumber) {
-var listSort = sorting(arrNumber);
-var countHighest = getTotal(listSort);
-return countHighest;
-// return listSort;
+    var listSort = sorting(arrNumber);
+    var countHighest = getTotal(listSort);
+    // var countHighest = getHigh(arrNumber);
+    return countHighest;
 }
 
 console.log(mostFrequentLargestNumbers([2, 8, 4, 6, 8, 5, 8, 4]));

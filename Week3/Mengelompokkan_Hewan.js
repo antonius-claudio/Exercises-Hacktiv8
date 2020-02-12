@@ -69,7 +69,6 @@ function groupAnimals(animals) {
         let temp = [];
         for (let j = 0; j < animals.length; j++) {
             if (abjad[i] === animals[j][0]) {       
-                // temp = animals[j];
                 temp.push(animals[j]);
             }
         }
@@ -78,6 +77,22 @@ function groupAnimals(animals) {
     }
     return result;
 }
+
+//  OBJECT
+// function groupAnimals(animals) {
+//     let obj = {};
+
+
+
+//     for (let i = 0; i < animals.length; i++) {
+//         if (obj[animals[i][0]] == null)
+//             obj[animals[i][0]] = [animals[i]];
+//         else obj[animals[i][0]].push(animals[i]);  
+//     }
+
+//     return Object.values(obj);
+// }
+
 
 // TEST CASES
 console.log(groupAnimals(['cacing', 'ayam', 'kuda', 'anoa', 'kancil']));

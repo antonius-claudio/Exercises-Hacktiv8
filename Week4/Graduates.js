@@ -1,34 +1,50 @@
 // Claudio Antonius
 
 function graduates (students) {
+    // let obj = {};
+    // if (students.length !== 0) {
+    //     // mencari kelas agar tidak double
+    //     let arrClass = [];
+    //     arrClass.push(students[0].class);
+    //     for (let i = 1; i < students.length; i++) {
+    //         let condition = true;
+    //         for (let j = 0; j < arrClass.length; j++) {
+    //             if (arrClass[j]===students[i].class)                
+    //                 condition = false;
+    //         }
+    //         if (condition === true)
+    //             arrClass.push(students[i].class);
+    //     }
+    //     // mencari perkelas
+    //     for (let k = 0; k < arrClass.length; k++) {
+    //         // mencari persiswa
+    //         let arrStudentGrad = [];
+    //         for (let l = 0; l < students.length; l++) {
+    //             let objStudentGrad = {};
+    //             if ((students[l].class === arrClass[k]) && (students[l].score >= 75)) {
+    //                 objStudentGrad.name = students[l].name;
+    //                 objStudentGrad.score = students[l].score;
+    //                 arrStudentGrad.push(objStudentGrad);
+    //             }
+    //         }
+    //         obj[arrClass[k]] = arrStudentGrad;
+    //     }
+    // }
+    // return obj;
+
+    // OBJECT
     let obj = {};
-    if (students.length !== 0) {
-        // mencari kelas agar tidak double
-        let arrClass = [];
-        arrClass.push(students[0].class);
-        for (let i = 1; i < students.length; i++) {
-            let condition = true;
-            for (let j = 0; j < arrClass.length; j++) {
-                if (arrClass[j]===students[i].class)                
-                    condition = false;
+
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].score >= 75) {
+            let temp = {
+                name : students[i].name,
+                score : students[i].score
             }
-            if (condition === true)
-                arrClass.push(students[i].class);
-        }
-        // mencari perkelas
-        for (let k = 0; k < arrClass.length; k++) {
-            // mencari persiswa
-            let arrStudentGrad = [];
-            for (let l = 0; l < students.length; l++) {
-                let objStudentGrad = {};
-                if ((students[l].class === arrClass[k]) && (students[l].score >= 75)) {
-                    objStudentGrad.name = students[l].name;
-                    objStudentGrad.score = students[l].score;
-                    arrStudentGrad.push(objStudentGrad);
-                }
-            }
-            obj[arrClass[k]] = arrStudentGrad;
-        }
+            if (obj[students[i].class] == null)
+                obj[students[i].class] = [temp]
+            else obj[students[i].class].push(temp);
+        }        
     }
     return obj;
 }
